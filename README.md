@@ -34,16 +34,6 @@ AI destekli profesyonel not uygulaması. Akıllı özetleme, otomatik etiketleme
 
 ---
 
-## 🖼️ Ekran Görüntüleri | Screenshots
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/placeholder/home-light.png" width="350"/>
-  <img src="https://user-images.githubusercontent.com/placeholder/home-dark.png" width="350"/>
-  <br>
-  <img src="https://user-images.githubusercontent.com/placeholder/dashboard.png" width="700"/>
-</p>
-
----
 
 ## 🛠️ Kullandığımız Teknolojiler | Tech Stack
 
@@ -108,7 +98,7 @@ $ cd ../client && npm start
 ## 💬 Katkı & İletişim | Contributing & Contact
 
 > Katkı yapmak için PR gönderebilir veya [issue](https://github.com/kullanici/ai-note-app/issues) açabilirsin.
-> Soruların için: emre@example.com
+> Soruların için: emre.kocabey8@gmail.com
 
 ---
 
