@@ -76,7 +76,7 @@ const MainLayout = ({ children }) => {
     >
       <Box sx={{ p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Typography variant="h6" component="div">
-          AI Not Uygulaması
+          AI Notlarım
         </Typography>
       </Box>
       <Divider />
@@ -94,7 +94,7 @@ const MainLayout = ({ children }) => {
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" />
+              <ListItemText primary="Notlarım" />
             </ListItem>
             <ListItem button component={RouterLink} to="/notes/create">
               <ListItemIcon>
@@ -186,7 +186,7 @@ const MainLayout = ({ children }) => {
                     to="/dashboard"
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                    Dashboard
+Notlarım
                   </Button>
                   <Button
                     component={RouterLink}

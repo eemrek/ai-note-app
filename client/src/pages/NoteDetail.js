@@ -111,7 +111,7 @@ const NoteDetail = () => {
   //     <Box sx={{ textAlign: 'center', mt: 4 }}>
   //       <Alert severity="warning">Bu notu görüntüleme yetkiniz yok.</Alert>
   //       <Button component={Link} to="/dashboard" sx={{ mt: 2 }}>
-  //         Dashboard'a Dön
+  //         Notlarım'a Dön
   //       </Button>
   //     </Box>
   //   );

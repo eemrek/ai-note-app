@@ -334,13 +334,30 @@ const Dashboard = () => {
                       display: 'flex',
                       flexDirection: 'column',
                       position: 'relative',
-                      bgcolor: theme.palette.background.paper,
-                      transition: theme.transitions.create(['box-shadow', 'transform'], {
+                      bgcolor: theme.palette.mode === 'dark' ? 'rgba(40,50,70,0.82)' : 'rgba(255,255,255,0.88)',
+                      borderRadius: '22px',
+                      boxShadow: theme.palette.mode === 'dark'
+                        ? '0 6px 32px 0 rgba(66,165,245,0.13), 0 1.5px 8px 0 rgba(40,50,70,0.09)'
+                        : '0 6px 28px 0 rgba(66,165,245,0.08), 0 1.5px 7px 0 rgba(40,50,70,0.05)',
+                      border: theme.palette.mode === 'dark'
+                        ? '1.5px solid rgba(66,165,245,0.13)'
+                        : '1.5px solid rgba(66,165,245,0.11)',
+                      backdropFilter: theme.palette.mode === 'dark' ? 'blur(7px)' : 'blur(3.5px)',
+                      color: theme.palette.mode === 'dark' ? 'inherit' : '#263238',
+                      transition: theme.transitions.create(['box-shadow', 'transform', 'background', 'border'], {
                         duration: theme.transitions.duration.short,
                       }),
                       '&:hover': {
-                        transform: 'translateY(-4px)',
-                        boxShadow: theme.shadows[6], // Or a custom, more subtle shadow if theme.shadows[6] is too strong
+                        transform: 'translateY(-7px) scale(1.025)',
+                        boxShadow: theme.palette.mode === 'dark'
+                          ? '0 12px 44px 0 #42a5f555, 0 2px 12px 0 #26323833'
+                          : '0 16px 44px 0 #42a5f533, 0 3px 14px 0 #b6d0ff44',
+                        border: theme.palette.mode === 'dark'
+                          ? '1.5px solid #42a5f5cc'
+                          : '1.5px solid #1976d2',
+                        bgcolor: theme.palette.mode === 'dark'
+                          ? 'rgba(40,50,70,0.95)'
+                          : 'rgba(255,255,255,0.98)',
                       }
                     }}
                   >

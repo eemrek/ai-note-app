@@ -265,7 +265,7 @@ const EditNote = () => {
       <Box sx={{ textAlign: 'center', mt: 4 }}>
         <Typography variant="h5">Not bulunamadı.</Typography>
         <Button component="a" href="/dashboard" sx={{ mt: 2 }}>
-          Dashboard'a Dön
+Notlarım'a Dön
         </Button>
       </Box>
     );

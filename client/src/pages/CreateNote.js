@@ -30,7 +30,10 @@ import {
 } from '@mui/icons-material';
 import { useNotes } from '../context/NotesContext';
 
+import { useTheme } from '@mui/material';
+
 const CreateNote = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
   const { addNote, analyzeNoteWithAI } = useNotes();
   
@@ -227,7 +230,34 @@ const CreateNote = () => {
       <Grid container spacing={3}>
         {/* Not oluşturma formu */}
         <Grid item xs={12} md={8}>
-          <Paper sx={{ p: 3, mb: 3 }}>
+          <Paper
+            sx={{
+              p: { xs: 2.5, sm: 4 },
+              mb: 3,
+              borderRadius: '22px',
+              background: theme.palette.mode === 'dark' ? 'rgba(40,50,70,0.86)' : 'rgba(255,255,255,0.93)',
+              boxShadow: theme.palette.mode === 'dark'
+                ? '0 8px 32px 0 rgba(66,165,245,0.13), 0 2px 12px 0 rgba(40,50,70,0.09)'
+                : '0 8px 28px 0 rgba(66,165,245,0.08), 0 2px 8px 0 rgba(40,50,70,0.05)',
+              border: theme.palette.mode === 'dark'
+                ? '1.5px solid rgba(66,165,245,0.15)'
+                : '1.5px solid rgba(66,165,245,0.10)',
+              color: theme.palette.mode === 'dark' ? 'inherit' : '#263238',
+              backdropFilter: theme.palette.mode === 'dark' ? 'blur(7px)' : 'blur(3.5px)',
+              transition: 'box-shadow 0.2s, background 0.2s, border 0.2s',
+              '&:hover': {
+                boxShadow: theme.palette.mode === 'dark'
+                  ? '0 16px 44px 0 #42a5f555, 0 4px 18px 0 #26323833'
+                  : '0 16px 44px 0 #42a5f533, 0 3px 14px 0 #b6d0ff44',
+                border: theme.palette.mode === 'dark'
+                  ? '1.5px solid #42a5f5cc'
+                  : '1.5px solid #1976d2',
+                background: theme.palette.mode === 'dark'
+                  ? 'rgba(40,50,70,0.97)'
+                  : 'rgba(255,255,255,0.98)',
+              },
+            }}
+          >
             <Box component="form" onSubmit={handleSubmit}>
               <TextField
                 fullWidth
